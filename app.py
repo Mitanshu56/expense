@@ -14,6 +14,18 @@ from reportlab.lib.units import inch
 import base64
 import os
 import pytz
+import datetime
+import pytz  # Make sure this is in requirements.txt
+
+# Set your desired timezone (e.g., 'Asia/Kolkata' for India)
+tz = pytz.timezone('Asia/Kolkata')  # Change this based on your location
+
+# Get the current time in your timezone
+current_time = datetime.datetime.now(tz)
+today = current_time.date()
+
+
+
 os.environ['TZ'] = 'Asia/Kolkata'  # Change to your timezone
 
 class ExpenseTracker:
