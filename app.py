@@ -12,6 +12,9 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.units import inch
 import base64
+import os
+import pytz
+os.environ['TZ'] = 'Asia/Kolkata'  # Change to your timezone
 
 class ExpenseTracker:
     def __init__(self):
